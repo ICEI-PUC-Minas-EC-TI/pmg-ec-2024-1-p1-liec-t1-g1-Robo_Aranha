@@ -11,19 +11,19 @@
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Samuel Roman Pujatti e Andrade
+* Lucas Batista
+* Sophia da Costa Fernandes
+* Ravi Dornellas e Silva
 * Nome completo do aluno 5
 
 ## Orientador
 
-* Nome completo do professor 1
+* Felipe Lara
 
 ## Resumo
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto se resume em uma chamda inteligente, onde há um QR code gerado pelo celular
 
 # Código (do arduino ou esp32)
 
