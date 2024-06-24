@@ -15,7 +15,6 @@
 * Lucas Batista
 * Sophia da Costa Fernandes
 * Ravi Dornellas e Silva
-* Nome completo do aluno 5
 
 ## Orientador
 
