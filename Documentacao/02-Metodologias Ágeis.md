@@ -21,4 +21,4 @@ Para realizar o processo e organizar as tarefas de cada um, criamos um grupo no 
 
 As ferramentas utilizadas no projeto foram:
 
-IDE do Arduíno, e APP INVENTOR
+IDE do Arduino, e APP INVENTOR
