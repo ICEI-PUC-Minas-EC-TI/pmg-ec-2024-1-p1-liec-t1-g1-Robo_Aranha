@@ -28,7 +28,7 @@ Descreva o desenvolvimento do código do aplicativo.
 
 ### Montagem
 
-Descreva como foi o processo da montagem do projeto.
+O processo da montagem foi bem trabalhoso, como utilizamos um projeto feito par alunos do semestre passado. Outro impasse seria a placa do bluetooth, pois ele estava posicionado na parte de baixo do robo, o que poderia levar a futuras complicacaoes
 
 ### Desenvolvimento do Código
 
