@@ -28,7 +28,7 @@ Descreva o desenvolvimento do código do aplicativo.
 
 ### Montagem
 
-O processo da montagem foi bem trabalhoso, como utilizamos um projeto feito par alunos do semestre passado. Outro impasse seria a placa do bluetooth, pois ele estava posicionado na parte de baixo do robo, o que poderia levar a futuras complicacaoes, como dificultar a movimentacao quanto danificar o modulo
+O processo da montagem foi bem trabalhoso, como utilizamos um projeto feito par alunos do semestre passado. Outro impasse seria a placa do bluetooth, pois ele estava posicionado na parte de baixo do robo, o que poderia levar a futuras complicacaoes, como dificultar a movimentacao quanto danificar o modulo. Alem disso, o arduino não estava compilando, por isso foi substituido por um arduino nano o que tornou os cabos mais organizados. Em adicao aranha foi direcionada para a calibracao a qual nao foi bem sucedida e ao momento da remontagem da aranha houve a danificacao de pecas importantes, tambem fragilizou a estrutura do projeto
 
 ### Desenvolvimento do Código
 
