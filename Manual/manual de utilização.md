@@ -1,4 +1,4 @@
 
 ## Instruções de utilização
 
-Assim que a primeira versão do projeto estiver disponível, deverá complementar com as instruções de utilização. Descreva como configurar o hardware/software e informações importantes para executar o projeto.
+Para a utilização do robô é necessário baixar o aplicativo do github no smartphone, abrir o repositório do projeto, entrar na pasta app e instalar o apk. Em seguida, ativar o bluetooth e conectar com o módulo do arduino. Em sequência, parear no aplicativo e controlar o quadrúpede
