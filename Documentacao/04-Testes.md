@@ -1,3 +1,3 @@
 # Testes do Projeto
 
-Descreva aqui como foram realizados os testes para o funcionamento do projeto. Descreva também os resultados encontrados e as limitações do projeto.
+Os testes foram realizados a partir de prints no monitor serial para certificar conexão entre o aplicativo e o hardware.
