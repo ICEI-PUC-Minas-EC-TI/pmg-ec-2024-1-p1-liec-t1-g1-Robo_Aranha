@@ -10,10 +10,10 @@ O campo da robótica quadrúpede é particularmente desafiador em termos de dese
 
 Aqui estão alguns dos principais objetivos que este projeto está buscando:
 
-1-A criação de uma aranha robótica de quatro patas com agilidade e estabilidade excepcionais.
-2-O estabelecimento de um sistema controlado por Bluetooth para o robô através do módulo HC-05.
-3-Escrever programas de movimento de servomotores em C++ para garantir precisão e eficácia.
-4-Realização de testes em diversas superfícies para verificar as capacidades operacionais do robô.
+1-A criação de uma aranha robótica de quatro patas com agilidade e estabilidade excepcionais. <br/>
+2-O estabelecimento de um sistema controlado por Bluetooth para o robô através do módulo HC-05.<br/>
+3-Escrever programas de movimento de servomotores em C++ para garantir precisão e eficácia.<br/>
+4-Realização de testes em diversas superfícies para verificar as capacidades operacionais do robô.<br/>
  
 ## Público-Alvo
 
