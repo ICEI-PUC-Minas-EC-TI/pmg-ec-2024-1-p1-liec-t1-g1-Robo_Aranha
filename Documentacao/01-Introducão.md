@@ -1,17 +1,20 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+A robótica brilha como uma área inovadora na engenharia da computação que é frequentemente aplicada na prática hoje. Projeto Robô Aranha Quadrúpede é o nome desta iniciativa, que visa projetar um robô tipo aranha com quatro pernas e oito servomotores controlados pelo Arduino Nano, enquanto a comunicação é feita via Bluetooth através do módulo HC-05. Para a parte de programação, C++ foi utilizado no Arduino IDE: permitiu a ponte bem-sucedida de hardware e software, facilitando a facilidade de uso para nossos engenheiros.
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que o seu projeto deve  resolver. Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. 
+O campo da robótica quadrúpede é particularmente desafiador em termos de desenvolvimento de mobilidade e estabilidade. Principalmente em superfícies irregulares, alcançar estas características só é possível se houver um nível de controle nunca experimentado antes no movimento, bem como poder adotar diferentes tipos de terreno devido à natureza da estrutura. Este projeto busca abordar esses desafios, criando um robô-aranha capaz de realizar movimentos precisos e estáveis.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um projeto para solucionar o problema apresentado acima. 
+Aqui estão alguns dos principais objetivos que este projeto está buscando:
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+1-A criação de uma aranha robótica de quatro patas com agilidade e estabilidade excepcionais.
+2-O estabelecimento de um sistema controlado por Bluetooth para o robô através do módulo HC-05.
+3-Escrever programas de movimento de servomotores em C++ para garantir precisão e eficácia.
+4-Realização de testes em diversas superfícies para verificar as capacidades operacionais do robô.
  
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão o projeto. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, etc.
+O público-alvo deste projeto inclui estudantes e profissionais de engenharia de computação e robótica, bem como entusiastas da área que buscam entender e desenvolver tecnologias inovadoras em robótica. Este projeto também pode interessar a pesquisadores que trabalham com mobilidade robótica e controle de movimentos.
