@@ -23,7 +23,10 @@
 
 ## Resumo
 
-O projeto se resume em uma chamda inteligente, onde há um QR code gerado pelo celular
+
+  O projeto consiste na criação de um robô-aranha quadrúpede, equipado com 8 servomotores. A construção foi realizada utilizando um Arduino Nano e o controle é feito via Bluetooth, utilizando o módulo HC-05. A programação foi desenvolvida em C++ na IDE do Arduino.
+  O robô possui uma estrutura capaz de realizar movimentos precisos, em função dos servo motores. Cada perna do robô é controlada individualmente, permitindo uma grande  mobilidade e a estabilidade em superfícies variadas
+
 
 # Código (do arduino ou esp32)
 
