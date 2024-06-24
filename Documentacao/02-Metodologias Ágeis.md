@@ -3,24 +3,22 @@
 
 # Metodologia
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+No desenvolvimento do robô-aranha quadrúpede, a equipe adotou uma abordagem estruturada e colaborativa. Inicialmente, foi estabelecido o problema e os objetivos do projeto de forma clara. Diversos ambientes foram utilizados, como o laboratório de robótica para montagem e testes, a sala de estudos para discussões teóricas e desenvolvimento de código, e plataformas online como Microsoft Teams e Google Drive para comunicação e colaboração. A gestão do código fonte foi feita por meio do GitHub, possibilitando o controle de versão e a integração eficiente das contribuições individuais. O processo de desenvolvimento foi realizado de forma iterativa e incremental, iniciando com pesquisa e planejamento, seguido pela montagem do hardware, programação dos movimentos em C++ na IDE do Arduino, e testes em diferentes superfícies para assegurar estabilidade e precisão. Para a organização e gestão da equipe, foram utilizadas ferramentas como o Google Drive para compartilhamento de documentos. Reuniões semanais foram agendadas para revisar o progresso e ajustar o planejamento conforme necessário, empregando feedback contínuo para aprimorar o desempenho do robô.
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
-
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Aluno 1;
-- Equipe de Desenvolvimento: Aluno 1, Aluno 2, Aluno 3;
-
+A nossa equipe fez uma divisão de trabalho estraatégica com base na experiência de cada um do grupo e suas habilidades com a programação de arduíno. Lembrando que todos as partes do trabalho foram revisadas por toda à equipe.
+Ravi- Foi responsável pela programação do rôbo e pela montagem do Hardware
+Lucas- Foi responsável pela criação do aplicativo
+Yuri- Foi responsável por calibrar os motores do rôbo
+Sophia e Samuel- Responsáveis pela documentação do projeto e organização de tarefas.
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. Cole aqui um print do quadro Kanban utilizado pelo grupo.
- 
+Para realizar o processo e organizar as tarefas de cada um, criamos um grupo no whastapp para delegar o que cada membro deveria fazer para contribuir com o sucesso do projeto.
 
 ### Ferramentas
 
 As ferramentas utilizadas no projeto foram:
 
-- Liste aqui as ferramentas utilizadas para desenvolvimento do projeto (como por exemplo: Arduino IDE, APP Inventor, trello e outros). Obs: não é para listar aqui os componentes utilizados.
+IDE do Arduíno, e APP INVENTOR
