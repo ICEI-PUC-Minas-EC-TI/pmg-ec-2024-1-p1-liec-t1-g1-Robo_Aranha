@@ -2,8 +2,14 @@
 # Materiais
 
 Os materiais utilizados no projeto foram:
-- Liste os materiais usados no projeto, como Arduino/ESP, sensores, atuadores e outros.
-
+- Shield de expansão do arduino nano
+- Arduino nano
+- 8 servomotores
+- Bluetoth HC-05
+- Jumper
+- 2 leds
+- 2 resistores de 400 Ohms
+  
 # Desenvolvimento
 
 Descreva aqui como foi o desenvolvimento do trabalho, destacando cada uma das etapas necessárias para chegar até a solução final.
