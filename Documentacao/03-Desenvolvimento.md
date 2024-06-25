@@ -7,8 +7,8 @@ Os materiais utilizados no projeto foram:
 - 8 servomotores
 - Bluetoth HC-05
 - Jumper
-- 2 leds
-- 2 resistores de 400 Ohms
+- 1 led
+- 1 resistor de 400 Ohms
   
 # Desenvolvimento
 
