@@ -1,0 +1,97 @@
+// Defina os pinos conectados aos segmentos do visor
+const int a = 2;
+const int b = 3;
+const int c = 4;
+const int d = 5;
+const int e = 6;
+const int f = 7;
+const int g = 8;
+#include <Servo.h>
+
+// Definindo as portas dos servos
+#define SERVO2_PORT 2
+#define SERVO1_PORT 3
+#define SERVO3_PORT 4
+#define SERVO4_PORT 5
+#define SERVO6_PORT 6
+#define SERVO5_PORT 7
+#define SERVO8_PORT 8
+#define SERVO7_PORT 9
+
+// Criando variáveis Servo para cada motor
+Servo servo2;
+Servo servo1;
+Servo servo3;
+Servo servo4;
+Servo servo6;
+Servo servo5;
+Servo servo8;
+Servo servo7;
+
+void setup() {
+  // Configure os pinos como saídas
+  pinMode(a, OUTPUT);
+  pinMode(b, OUTPUT);
+  pinMode(c, OUTPUT);
+  pinMode(d, OUTPUT);
+  pinMode(e, OUTPUT);
+  pinMode(f, OUTPUT);
+  pinMode(g, OUTPUT);
+  Serial.begin(9600);
+
+  // Anexando os servos às portas correspondentes
+  servo2.attach(SERVO2_PORT);
+  servo1.attach(SERVO1_PORT);
+  servo3.attach(SERVO3_PORT);
+  servo4.attach(SERVO4_PORT);
+  servo6.attach(SERVO6_PORT);
+  servo5.attach(SERVO5_PORT);
+  servo8.attach(SERVO8_PORT);
+  servo7.attach(SERVO7_PORT);
+
+  // Iniciando todos os servos na posição 0
+  servo2.write(0);
+  servo1.write(0);
+  servo3.write(0);
+  servo4.write(0);
+  servo6.write(0);
+  servo5.write(0);
+  servo8.write(0);
+  servo7.write(0);
+}
+
+void loop() {
+  // Envie 1 (HIGH) para as portas b e c (segmentos 'b' e 'c') e 0 (LOW) para os demais segmentos
+  digitalWrite(a, LOW);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, LOW);
+  digitalWrite(e, LOW);
+  digitalWrite(f, LOW);
+  digitalWrite(g, LOW);
+
+  // Aguarde alguns segundos antes de desligar os segmentos
+  delay(3000);
+
+  // Desligue todos os segmentos
+  digitalWrite(a, LOW);
+  digitalWrite(b, LOW);
+  digitalWrite(c, LOW);
+  digitalWrite(d, LOW);
+  digitalWrite(e, LOW);
+  digitalWrite(f, LOW);
+  digitalWrite(g, LOW);
+  // Movendo todos os servos para a posição 90
+  servo2.write(90);
+  servo1.write(90);
+  servo3.write(90);
+  servo4.write(90);
+  servo6.write(90);
+  servo5.write(90);
+  servo8.write(90);
+  servo7.write(90);
+
+  // Aguarde um pouco para garantir que todos os servos se movam para a posição
+  delay(1000);
+
+}
