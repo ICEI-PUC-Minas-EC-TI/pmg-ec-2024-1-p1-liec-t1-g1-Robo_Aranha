@@ -12,7 +12,14 @@ Os materiais utilizados no projeto foram:
   
 # Desenvolvimento
 
-Descreva aqui como foi o desenvolvimento do trabalho, destacando cada uma das etapas necessárias para chegar até a solução final.
+Começamos com o hardware. Utilizamos o Arduino Nano como nossa plataforma de controle. Ele é compacto e possui recursos suficientes para o nosso projeto.
+Nessa etapa, conectamos os motores, sensores e outros componentes à placa. Calibrar os movimentos da máquina foi um desafio, mas com testes e ajustes, conseguimos obter resultados satisfatórios.<br/>
+A próxima etapa envolveu a criação do software embarcado para o Arduino Nano. Escrevemos o código em C/C++ para controlar os motores, interpretar os dados dos sensores e garantir a comunicação adequada.
+Focamos na eficiência e na otimização do código para garantir que a máquina respondesse rapidamente aos comandos.<br/>
+Para permitir o controle remoto, desenvolvemos um aplicativo simples no MIT App Inventor. Ele tinha botões para acionar os movimentos da máquina (avançar, recuar, girar etc.).
+A interface do aplicativo foi projetada de forma intuitiva para facilitar o uso por qualquer pessoa, mesmo sem conhecimento técnico.<br/>
+A etapa final foi integrar o código do Arduino Nano com o aplicativo. Usamos comunicação Bluetooth para estabelecer a conexão.
+Quando o usuário pressionava um botão no aplicativo, ele enviava um comando via Bluetooth para o Arduino Nano, que interpretava e executava a ação correspondente na máquina.
 
 ## Desenvolvimento do Aplicativo
 
@@ -24,7 +31,7 @@ Descreva o desenvolvimento das telas do aplicativo.
 Inicialmente, o código foi desenvolvido para testar os motores, incluindo a calibração e a identificação. Posteriormente, adaptou-se o código para controlar o movimento da máquina e, por fim, para integrá-lo aos comandos via Bluetooth e ao aplicativo. 
 
 ## Desenvolvimento do Hardware
-O hardware foi confeccionado com o arduino nano e shield, o que resoltou em uma construção mais limpa, optamos por noa utiloizar protoboard também para limpar a montagem e deixar o robo mais leve
+O hardware foi montado utilizando o Arduino Nano e um shield, resultando em uma construção mais organizada. Além disso, optamos por não utilizar protoboard para simplificar a montagem e deixar o robô mais leve
 
 ### Montagem
 
