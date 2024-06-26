@@ -24,7 +24,7 @@ Descreva o desenvolvimento das telas do aplicativo.
 Inicialmente, o código foi desenvolvido para testar os motores, incluindo a calibração e a identificação. Posteriormente, adaptou-se o código para controlar o movimento da máquina e, por fim, para integrá-lo aos comandos via Bluetooth e ao aplicativo. 
 
 ## Desenvolvimento do Hardware
-
+O hardware foi confeccionado com o arduino nano e shield, o que resoltou em uma construção mais limpa, optamos por noa utiloizar protoboard também para limpar a montagem e deixar o robo mais leve
 
 ### Montagem
 
