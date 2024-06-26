@@ -22,7 +22,7 @@
 
 ## Resumo
 
-
+  **Apresentamos Spindle! Uma aranha-robô simpática e ágil, com quatro pernas que se movem com precisão e graça.**
   O projeto consiste na criação de um robô-aranha quadrúpede, equipado com 8 servomotores. A construção foi realizada utilizando um Arduino Nano e o controle é feito via Bluetooth, utilizando o módulo HC-05. A programação foi desenvolvida em C++ na IDE do Arduino.
   O robô possui uma estrutura capaz de realizar movimentos precisos, em função dos servo motores. Cada perna é controlada individualmente, permitindo uma grande  mobilidade além da estabilidade em superfícies variadas
 
