@@ -1,6 +1,6 @@
 # Introdução
 
-A robótica brilha como uma área inovadora na engenharia da computação que é frequentemente aplicada na prática hoje. Projeto Robô Aranha Quadrúpede é o nome desta iniciativa, que visa projetar um robô tipo aranha com quatro pernas e oito servomotores controlados pelo Arduino Nano, enquanto a comunicação é feita via Bluetooth através do módulo HC-05. Para a parte de programação, C++ foi utilizado no Arduino IDE: permitiu a ponte bem-sucedida de hardware e software, facilitando a facilidade de uso para nossos engenheiros.
+A robótica brilha como uma área inovadora na engenharia da computação que é frequentemente aplicada na prática hoje. Projeto Robô Aranha Quadrúpede é o nome desta iniciativa, que visa projetar um robô tipo aranha com quatro pernas e oito servomotores controlados pelo Arduino Nano, enquanto a comunicação é feita via Bluetooth através do módulo HC-05. Para a parte de programação, C++ foi utilizado no Arduino IDE: permitiu a ponte bem-sucedida de hardware e software, facilitando o uso para nossos engenheiros.
 
 ## Problema
 
