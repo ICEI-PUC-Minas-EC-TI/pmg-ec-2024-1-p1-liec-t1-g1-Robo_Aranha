@@ -42,5 +42,4 @@ A montagem foi bastante trabalhosa, pois utilizamos um projeto desenvolvido por 
 O desenvolvimento foi, sem dúvida, bastante desafiador, especialmente devido à dificuldade em calibrar os movimentos da aranha. 
 
 ## Comunicação entre App e Hardware
-
-Descreva como foi o processo de comunicação entre App e arduino/ESP.
+A comunicação entre o aplicativo e o hardware do projeto foi realizada com o MIT App Inventor, que é a plataforma onde o app de controle da aranha foi construído. Utilizou-se a conexão via Bluetooth para enviar o comando do clique do botão para a ação programada na aranha
