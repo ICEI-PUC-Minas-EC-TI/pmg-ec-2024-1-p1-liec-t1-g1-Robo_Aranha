@@ -29,7 +29,7 @@ O desenvolvimento no App Inventor foi prático, mas as ferramentas que ele ofere
 O código funciona da seguinte forma: após selecionar um servidor Bluetooth a partir da lista, o aplicativo enviará um caractere respectivo ao botão apertado para o servidor, que é então interpretado no código do Arduino..
 
 ### Código
-Inicialmente, o código foi desenvolvido para testar os motores, incluindo a calibração e a identificação. Posteriormente, adaptou-se o código para controlar o movimento da máquina e, por fim, para integrá-lo aos comandos via Bluetooth e ao aplicativo. 
+Inicialmente, o código foi desenvolvido para testar os motores, incluindo a calibração e a identificação. Posteriormente, adaptou-se o código para controlar o movimento da máquina e, por fim, para integrá-lo aos comandos via Bluetooth e ao aplicativo. Este código controla um robô aranha usando um Arduino. O robô é equipado com 8 servos, sendo 4 para pivotar (girar) e 4 para levantar as pernas. O código também utiliza um módulo Bluetooth para receber comandos de controle, como mover para frente, para trás, virar à esquerda, à direita, parar, dançar e acenar.
 
 ## Desenvolvimento do Hardware
 O hardware foi montado utilizando o Arduino Nano e um shield, resultando em uma construção mais organizada. Além disso, optamos por não utilizar protoboard para simplificar a montagem e deixar o robô mais leve
