@@ -21,8 +21,7 @@ Descreva aqui como foi o desenvolvimento do trabalho, destacando cada uma das et
 Descreva o desenvolvimento das telas do aplicativo.
 
 ### Código
-
-Primeiramente, o código foi direcionado para testes, como a calibração e a identificação dos motores. Em seguida, o código foi moldado para o funcionamento da movimentação da máquina e posteriormente para integrar os comandos bluetooth  e aplicativo.
+Inicialmente, o código foi desenvolvido para testar os motores, incluindo a calibração e a identificação. Posteriormente, adaptou-se o código para controlar o movimento da máquina e, por fim, para integrá-lo aos comandos via Bluetooth e ao aplicativo. 
 
 ## Desenvolvimento do Hardware
 
