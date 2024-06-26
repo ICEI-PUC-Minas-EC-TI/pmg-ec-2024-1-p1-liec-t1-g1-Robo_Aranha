@@ -11,8 +11,8 @@ A nossa equipe fez uma divisão de trabalho estraatégica com base na experiênc
 -Ravi- Foi responsável pela programação do rôbo e pela montagem do Hardware<br/>
 -Lucas- Foi responsável pela criação do aplicativo<br/>
 -Yuri- Foi responsável por calibrar os motores do rôbo<br/>
--Sophia e Samuel- Responsáveis pela documentação do projeto e organização de tarefas.<br/>
-
+-Sophia- Foi responsável pela documentação do projeto e exerceu pesquisas para o melhoramento do aplicativo.<br/>
+ -Samuel- Foi responsável pela documentação do projeto e pela organização de tarefas<br/>
 ### Processo
 
 Para realizar o processo e organizar as tarefas de cada um, criamos um grupo no whastapp para delegar o que cada membro deveria fazer para contribuir com o sucesso do projeto.
