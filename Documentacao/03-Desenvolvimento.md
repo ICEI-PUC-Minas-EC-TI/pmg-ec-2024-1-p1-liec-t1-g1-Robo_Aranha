@@ -40,7 +40,7 @@ A montagem foi bastante trabalhosa, pois utilizamos um projeto desenvolvido por 
 
 ### Desenvolvimento do Código
 
-O desenvolvimento foi, sem dúvida, bastante desafiador, especialmente devido à dificuldade em calibrar os movimentos da aranha. 
+Desenvolver este código foi uma experiência fascinante e desafiadora. A parte mais interessante foi a implementação da lógica de controle para coordenar os movimentos dos servos de forma a realizar a locomoção do robô de maneira suave e precisa. Ajustar manualmente as variáveis da, db, dc e dd para calibrar os ângulos dos servos foi crucial. Isso garantiu que os movimentos ocorressem conforme esperado, alinhando cada servo para as posições corretas de pivô e elevação. Ter requisitos claros, como definir os ângulos específicos para cada movimento (como andar para frente, para trás, virar à esquerda ou à direita), foi fundamental para guiar o desenvolvimento e garantir que o código atendesse às necessidades de controle do robô.
 
 ## Comunicação entre App e Hardware
 A comunicação entre o aplicativo e o hardware do projeto foi realizada com o MIT App Inventor, que é a plataforma onde o app de controle da aranha foi construído. Utilizou-se a conexão via Bluetooth para enviar o comando do clique do botão para a ação programada na aranha
