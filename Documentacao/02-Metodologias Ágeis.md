@@ -9,10 +9,10 @@ No desenvolvimento do robô-aranha quadrúpede, a equipe adotou uma abordagem es
 
 A nossa equipe fez uma divisão de trabalho estraatégica com base na experiência de cada um do grupo e suas habilidades com a programação de arduino. Lembrando que todos as partes do trabalho foram revisadas por toda à equipe.<br/>
 -Ravi- Foi responsável pela programação do rôbo e pela montagem do Hardware<br/>
--Lucas- Foi responsável pela criação do aplicativo<br/>
--Yuri- Foi responsável por calibrar os motores do rôbo<br/>
+-Lucas- Foi responsável pela criação do aplicativo.<br/>
+-Yuri- Foi responsável por calibrar os motores do rôbo.<br/>
 -Sophia- Foi responsável pela documentação do projeto e exerceu pesquisas para o melhoramento do aplicativo.<br/>
- -Samuel- Foi responsável pela documentação do projeto e pela organização de tarefas<br/>
+ -Samuel- Foi responsável pela documentação do projeto e pela organização de tarefas.<br/>
 ### Processo
 
 Para realizar o processo e organizar as tarefas de cada um, criamos um grupo no whastapp para delegar o que cada membro deveria fazer para contribuir com o sucesso do projeto.
