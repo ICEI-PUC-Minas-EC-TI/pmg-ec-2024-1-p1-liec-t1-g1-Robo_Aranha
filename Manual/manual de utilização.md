@@ -1,4 +1,10 @@
 
 ## Instruções de utilização
 
-Para a utilização do robô é necessário baixar o aplicativo do github no smartphone, abrir o repositório do projeto, entrar na pasta app e instalar o apk. Em seguida, ativar o bluetooth e conectar com o módulo do arduino. Em sequência, parear no aplicativo e controlar o quadrúpede
+Para utilizar o spindle, siga estes passos:<br/>
+
+Baixe o aplicativo diretamente do GitHub em seu smartphone. <br/>
+Abra o repositório do projeto e navegue até a pasta "app" para instalar o arquivo APK.<br/>
+Ative o Bluetooth no seu dispositivo.<br/>
+Conecte-se ao módulo Arduino.<br/>
+Finalmente, emparelhe o robô com o aplicativo e assuma o controle total do quadrúpede!<br/>
