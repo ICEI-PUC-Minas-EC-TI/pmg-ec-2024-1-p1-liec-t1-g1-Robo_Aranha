@@ -1,24 +1,25 @@
-
 //***************Ravi**************//
-// aranha robo bluetooth
+// Faça a calibragem nescessária para seu próprio robô
+// Você pode fazer alterações por sua própria conta e risco.
+// Sinta-se à vontade para experimentar
 //==========================================================================================
 
-#include <Servo.h>    // include servo library
+#include <Servo.h>    // Inclui a biblioteca de servos
 
-//===== Globals ============================================================================
+//===== Variáveis Globais ==================================================================
 
-// Define USRF pins and variables
+// Define os pinos e variáveis 
 
 #define SPIDER_EYE_1    10
 #define SPIDER_EYE_2    11
 
-// calibration
-int da =  -12,  // Left Front Pivot
-    db =   10,  // Left Back Pivot
-    dc =  -18,  // Right Back Pivot
-    dd =   12;  // Right Front Pivot
+// Variáveis de calibração para ajustar as posições dos servos
+int da =  0,  // Pivô frontal esquerdo
+    db =   0,  // Pivô traseiro esquerdo
+    dc =  0,  // Pivô traseiro direito
+    dd =   0;  // Pivô frontal direito
 
-// servo initial positions + calibration
+// Posições iniciais dos servos + calibração
 int a90  = (90  + da),
     a120 = (120 + da),
     a150 = (150 + da),
@@ -39,32 +40,32 @@ int d0   = (0   + dd),
     d60  = (60  + dd),
     d90  = (90  + dd);
 
-// start points for servo
-int s11 = 90; // Front Left Pivot Servo
-int s12 = 90; // Front Left Lift Servo
-int s21 = 90; // Back Left Pivot Servo
-int s22 = 90; // Back Left Lift Servo
-int s31 = 90; // Back Right Pivot Servo
-int s32 = 90; // Back Right Lift Servo
-int s41 = 90; // Front Right Pivot Servo
-int s42 = 90; // Front Right Lift Servo
+// Pontos de início para os servos
+int s11 = 90; // Servo de pivô frontal esquerdo
+int s12 = 90; // Servo de elevação frontal esquerdo
+int s21 = 90; // Servo de pivô traseiro esquerdo
+int s22 = 90; // Servo de elevação traseiro esquerdo
+int s31 = 90; // Servo de pivô traseiro direito
+int s32 = 90; // Servo de elevação traseiro direito
+int s41 = 90; // Servo de pivô frontal direito
+int s42 = 90; // Servo de elevação frontal direito
 
 int f    = 0;
 int b    = 0;
 int l    = 0;
 int r    = 0;
-int spd  = 3;  // Speed of walking motion, larger the number, the slower the speed
-int high = 0;   // How high the robot is standing
+int spd  = 3;  // Velocidade do movimento de caminhada, quanto maior o número, menor a velocidade
+int high = 0;   // Altura em que o robô está posicionado
 
 // Define 8 Servos
-Servo myServo1; // Front Left Pivot Servo
-Servo myServo2; // Front Left Lift Servo
-Servo myServo3; // Back Left Pivot Servo
-Servo myServo4; // Back Left Lift Servo
-Servo myServo5; // Back Right Pivot Servo
-Servo myServo6; // Back Right Lift Servo
-Servo myServo7; // Front Right Pivot Servo
-Servo myServo8; // Front Right Lift Servo
+Servo myServo1; // Servo de pivô frontal esquerdo
+Servo myServo2; // Servo de elevação frontal esquerdo
+Servo myServo3; // Servo de pivô traseiro esquerdo
+Servo myServo4; // Servo de elevação traseiro esquerdo
+Servo myServo5; // Servo de pivô traseiro direito
+Servo myServo6; // Servo de elevação traseiro direito
+Servo myServo7; // Servo de pivô frontal direito
+Servo myServo8; // Servo de elevação frontal direito
 
 //==========================================================================================
 
@@ -73,24 +74,15 @@ Servo myServo8; // Front Right Lift Servo
 void setup()
 {
   
-  // Attach servos to Arduino Pins
-//  myServo1.attach(2);
-//  myServo2.attach(3);
-//  myServo3.attach(4);
-//  myServo4.attach(5);
-//  myServo5.attach(6);
-//  myServo6.attach(7);
-//  myServo7.attach(8);
-//  myServo8.attach(9);
-
-//Servo myServo1; // Front Left Pivot Servo
-//Servo myServo2; // Front Left Lift Servo
-//Servo myServo3; // Back Left Pivot Servo
-//Servo myServo4; // Back Left Lift Servo
-//Servo myServo5; // Back Right Pivot Servo
-//Servo myServo6; // Back Right Lift Servo
-//Servo myServo7; // Front Right Pivot Servo
-//Servo myServo8; // Front Right Lift Servo
+/*Servo myServo1; // Servo de pivô frontal esquerdo
+Servo myServo2; // Servo de elevação frontal esquerdo
+Servo myServo3; // Servo de pivô traseiro esquerdo
+Servo myServo4; // Servo de elevação traseiro esquerdo
+Servo myServo5; // Servo de pivô traseiro direito
+Servo myServo6; // Servo de elevação traseiro direito
+Servo myServo7; // Servo de pivô frontal direito
+Servo myServo8; // Servo de elevação frontal direito
+*/
 
   myServo1.attach(2);
   myServo2.attach(3);
@@ -107,9 +99,9 @@ void setup()
   pinMode(SPIDER_EYE_1, OUTPUT);
   pinMode(SPIDER_EYE_2, OUTPUT);
 
-  Serial.begin(9600);   // UART for Bluetooth Module with baudrate of 9600 bps
-  
+  Serial.begin(9600);   // UART para o módulo Bluetooth com baudrate de 9600 bps
 
+ // Pisca os "olhos" da aranha para indicar configuração
   digitalWrite(SPIDER_EYE_1, LOW);
   digitalWrite(SPIDER_EYE_2, LOW);
   delay(300);
@@ -134,13 +126,6 @@ void setup()
   // Centraliza os servos
   center_servos();
 
-  // Move para frente durante 5 segundos
-
-  // Executa movimentos em todas as direções
- 
-
-  // ... (outras configurações)
-
 
 }//setup
 
@@ -148,25 +133,26 @@ void setup()
 
 //== Loop ==================================================================================
 
-char Received_Command = 'S',Valid_Received_Command = 'S';    // By default stop command is selected.
+char Received_Command = 'S',Valid_Received_Command = 'S';    // Por padrão, o comando de parar está selecionado.
 
 void loop()
 {
   unsigned long value;
   unsigned long lastValue;
   
-  center_servos();  // Center all servos
-  high = 15;        // Set hight to 15
-  spd = 3;          // Set speed to 3
+  center_servos();  // Centraliza todos os servos
+  high = 15;        // Define a altura para 15
+  spd = 3;          // Define a velocidade para 3
 
-  while (1 == 1)    // Loop forever
+  while (1 == 1)   // Loop infinito
   {
 
-    if(Serial.available())                // Command from Bluetooth Module
+    if(Serial.available())                 // Verifica se há comando do módulo Bluetooth
     {
         Received_Command = Serial.read();
         //Serial.println(Received_Command);
-  
+       
+         // Valida o comando recebido
         if((Received_Command == 'F')||(Received_Command == 'B')||(Received_Command == 'R')||(Received_Command == 'L')||(Received_Command == 'X')||(Received_Command == 'Y')
        ||(Received_Command == 'M')||(Received_Command == 'm')||(Received_Command == 'N')||(Received_Command == 'n')||(Received_Command == 'S'))
        {
@@ -174,7 +160,7 @@ void loop()
             Serial.println(Received_Command);
        }
     }
-
+  // Executa o movimento baseado no comando
     if(Valid_Received_Command == 'F')            //move forward
     {
       forward();
@@ -203,14 +189,14 @@ void loop()
     }
     else if((Valid_Received_Command == 'S')||(Valid_Received_Command == 'm')||(Valid_Received_Command == 'n'))      //STOP
     {      
-      center_servos();  // Center all servos
-      high = 15;        // Set hight to 15
-      spd = 3;          // Set speed to 3
+      center_servos();  
+      high = 15;        // Define a altura para 15
+      spd = 3;          // Define a velocidade para 3
       Valid_Received_Command = 'P';
     }
       
 //      Serial.println(Received_Command);
-      delay(1000);  // Pause for 1000 ms before executing next movement
+      delay(1000);   // Pausa por 1000 ms antes de executar o próximo movimento
 
   }//while
 
@@ -264,19 +250,19 @@ void dance()
   //delay(300);
 }
 
-//== Wave ==================================================================================
+//== Acenar ==================================================================================
 
 void wave()
 {
   /*
-  myServo1 - Front Left Pivot Servo
-  myServo2 - Front Left Lift Servo
-  myServo3 - Back Left Pivot Servo
-  myServo4 - Back Left Lift Servo
-  myServo5 - Back Right Pivot Servo
-  myServo6 - Back Right Lift Servo
-  myServo7 - Front Right Pivot Servo
-  myServo8 - Front Right Lift Servo
+  myServo1 - Servo de pivô frontal esquerdo
+  myServo2 - Servo de elevação frontal esquerdo
+  myServo3 - Servo de pivô traseiro esquerdo
+  myServo4 - Servo de elevação traseiro esquerdo
+  myServo5 - Servo de pivô traseiro direito
+  myServo6 - Servo de elevação traseiro direito
+  myServo7 - Servo de pivô frontal direito
+  myServo8 - Servo de elevação frontal direito
   */
 
   center_servos();
@@ -300,7 +286,7 @@ void wave()
 
 }
 
-//== Bow ===================================================================================
+//== curvar ===================================================================================
 
 void bow()
 {
@@ -314,7 +300,7 @@ void bow()
   delay(1000);
 }
 
-//== Lean_Left =============================================================================
+//== inclinar para esquerda =============================================================================
 
 void lean_left()
 {
@@ -324,7 +310,7 @@ void lean_left()
   myServo8.write(150);
 }
 
-//== Lean_Right ============================================================================
+//== inclinar para direita ============================================================================
 
 void lean_right()
 {
@@ -334,45 +320,45 @@ void lean_right()
   myServo8.write(15);
 }
 
-//== Lean_Left =============================================================================
+//== aparar à esquerda =============================================================================
 
 void trim_left()
 {
-  da--; // Left Front Pivot
-  db--; // Left Back Pivot
-  dc--; // Right Back Pivot
-  dd--; // Right Front Pivot
+  da--; //pivô frontal esquerdo
+  db--; //pivô traseiro esquerdo
+  dc--; //pivô traseiro direito
+  dd--; //pivô frontal direito
 }
 
-//== Lean_Right ============================================================================
+//== aparar à direita ============================================================================
 
 void trim_right()
 {
-  da++; // Left Front Pivot
-  db++; // Left Back Pivot
-  dc++; // Right Back Pivot
-  dd++; // Right Front Pivot
+  da++; //pivô frontal esquerdo
+  db++; //pivô traseiro esquerdo
+  dc++; //pivô traseiro direito
+  dd++; //pivô frontal direito
 }
 
-//== Forward ===============================================================================
+//== Frente ===============================================================================
 
 void forward()
 {
-  // calculation of points
+ // cálculo dos pontos
 
-  // Left Front Pivot
+  // Pivô Frontal Esquerdo
   a90 = (90 + da),
   a120 = (120 + da),
   a150 = (150 + da),
   a180 = (180 + da);
 
-  // Left Back Pivot
+  // Pivô Traseiro Esquerdo
   b0 = (0 + db),
   b30 = (30 + db),
   b60 = (60 + db),
   b90 = (90 + db);
 
-  // Right Back Pivot
+  // Pivô Frontal Direito
   c90 = (90 + dc),
   c120 = (120 + dc),
   c150 = (150 + dc),
@@ -384,8 +370,8 @@ void forward()
   d60 = (60 + dd),
   d90 = (90 + dd);
 
-  // set servo positions and speeds needed to walk forward one step
-  // (LFP,  LBP, RBP,  RFP, LFL, LBL, RBL, RFL, S1, S2, S3, S4)
+   // Define posições dos servos e velocidades necessárias para andar para frente
+  // (LFP, LBP, RBP, RFP, LFL, LBL, RBL, RFL, S1, S2, S3, S4)
   srv(a180, b0 , c120, d60, 42,  33,  33,  42,  1,  3,  1,  1);
   srv( a90, b30, c90,  d30, 6,   33,  33,  42,  3,  1,  1,  1);
   srv( a90, b30, c90,  d30, 42,  33,  33,  42,  3,  1,  1,  1);
@@ -398,12 +384,12 @@ void forward()
   
 }
 
-//== Back ==================================================================================
+//== trás ==================================================================================
 
 void back ()
 {
-  // set servo positions and speeds needed to walk backward one step
-  // (LFP,  LBP, RBP,  RFP, LFL, LBL, RBL, RFL, S1, S2, S3, S4)
+   // Define posições dos servos e velocidades necessárias para andar para frente
+  // (LFP, LBP, RBP, RFP, LFL, LBL, RBL, RFL, S1, S2, S3, S4)
   srv(180, 0,  120, 60, 42, 33, 33, 42, 3,  1, 1, 1);
   srv(150, 90, 150, 90, 42, 18, 33, 42, 1,  3, 1, 1);
   srv(150, 90, 150, 90, 42, 33, 33, 42, 1,  3, 1, 1);
@@ -415,12 +401,12 @@ void back ()
 
 }
 
-//== Left =================================================================================
+//== esquerda =================================================================================
 
 void turn_left ()
 {
-  // set servo positions and speeds needed to turn left one step
-  // (LFP,  LBP, RBP,  RFP, LFL, LBL, RBL, RFL, S1, S2, S3, S4)
+  // Define posições dos servos e velocidades necessárias para andar para frente
+  // (LFP, LBP, RBP, RFP, LFL, LBL, RBL, RFL, S1, S2, S3, S4)
   srv(150,  90, 90,  30, 42, 6,  33, 42, 1, 3, 1, 1);
   srv(150,  90, 90,  30, 42, 33, 33, 42, 1, 3, 1, 1);
   srv(120,  60, 180, 0,  42, 33, 6,  42, 1, 1, 3, 1);
@@ -431,12 +417,12 @@ void turn_left ()
   srv(180,  0,  120, 60, 42, 33, 33, 33, 3, 1, 1, 1);
 }
 
-//== Right ================================================================================
+//== direita ================================================================================
 
 void turn_right ()
 {
-  // set servo positions and speeds needed to turn right one step
-  // (LFP,  LBP, RBP,  RFP, LFL, LBL, RBL, RFL, S1, S2, S3, S4)
+   // Define posições dos servos e velocidades necessárias para andar para frente
+  // (LFP, LBP, RBP, RFP, LFL, LBL, RBL, RFL, S1, S2, S3, S4)
   srv( 90, 30, 150, 90, 6,  33, 33, 42, 3, 1, 1, 1);
   srv( 90, 30, 150, 90, 42, 33, 33, 42, 3, 1, 1, 1);
   srv(120, 60, 180, 0,  42, 33, 33, 6,  1, 1, 1, 3);
@@ -447,7 +433,7 @@ void turn_right ()
   srv(180, 0,  120, 60, 42, 33, 33, 42, 1, 3, 1, 1);
 }
 
-//== Center Servos ========================================================================
+//== Centralizar Servos ========================================================================
 
 void center_servos()
 {
@@ -470,7 +456,7 @@ void center_servos()
   int s42 = 90; // Front Right Lift Servo
 }
 
-//== Increase Speed ========================================================================
+//== aumentar velocidade  ========================================================================
 
 void increase_speed()
 {
@@ -478,7 +464,7 @@ void increase_speed()
     spd--;
 }
 
-//== Decrease Speed ========================================================================
+//== diminuir velocidade ========================================================================
 
 void decrease_speed()
 {
@@ -488,23 +474,23 @@ void decrease_speed()
 
 //== Srv ===================================================================================
 
-void srv( int  p11, int p21, int p31, int p41, int p12, int p22, int p32, int p42, int sp1, int sp2, int sp3, int sp4)
+void srv(int p11, int p21, int p31, int p41, int p12, int p22, int p32, int p42, int sp1, int sp2, int sp3, int sp4)
 {
 
-  // p11: Front Left Pivot Servo
-  // p21: Back Left Pivot Servo
-  // p31: Back Right Pivot Servo
-  // p41: Front Right Pivot Servo
-  // p12: Front Left Lift Servo
-  // p22: Back Left Lift Servo
-  // p32: Back Right Lift Servo
-  // p42: Front Right Lift Servo
-  // sp1: Speed 1
-  // sp2: Speed 2
-  // sp3: Speed 3
-  // sp4: Speed 4
+  // p11: Servo de Pivô Frontal Esquerdo
+  // p21: Servo de Pivô Traseiro Esquerdo
+  // p31: Servo de Pivô Traseiro Direito
+  // p41: Servo de Pivô Frontal Direito
+  // p12: Servo de Elevação Frontal Esquerdo
+  // p22: Servo de Elevação Traseiro Esquerdo
+  // p32: Servo de Elevação Traseiro Direito
+  // p42: Servo de Elevação Frontal Direito
+  // sp1: Velocidade 1
+  // sp2: Velocidade 2
+  // sp3: Velocidade 3
+  // sp4: Velocidade 4
 
-  // Multiply lift servo positions by manual height adjustment
+  // Multiplica as posições dos servos de elevação pelo ajuste manual de altura
   p12 = p12 + high * 3;
   p22 = p22 + high * 3;
   p32 = p32 + high * 3;
@@ -513,24 +499,24 @@ void srv( int  p11, int p21, int p31, int p41, int p12, int p22, int p32, int p4
   while ((s11 != p11) || (s21 != p21) || (s31 != p31) || (s41 != p41) || (s12 != p12) || (s22 != p22) || (s32 != p32) || (s42 != p42))
   {
 
-    // Front Left Pivot Servo
-    if (s11 < p11)            // if servo position is less than programmed position
+    // Servo de Pivô Frontal Esquerdo
+    if (s11 < p11)            // se a posição do servo é menor que a posição programada
     {
       if ((s11 + sp1) <= p11)
-        s11 = s11 + sp1;      // set servo position equal to servo position plus speed constant
+        s11 = s11 + sp1;      // define a posição do servo como a posição do servo mais a constante de velocidade
       else
         s11 = p11;
     }
 
-    if (s11 > p11)            // if servo position is greater than programmed position
+    if (s11 > p11)            // se a posição do servo é maior que a posição programada
     {
       if ((s11 - sp1) >= p11)
-        s11 = s11 - sp1;      // set servo position equal to servo position minus speed constant
+        s11 = s11 - sp1;      // define a posição do servo como a posição do servo menos a constante de velocidade
       else
         s11 = p11;
     }
 
-    // Back Left Pivot Servo
+    // Servo de Pivô Traseiro Esquerdo
     if (s21 < p21)
     {
       if ((s21 + sp2) <= p21)
@@ -547,7 +533,7 @@ void srv( int  p11, int p21, int p31, int p41, int p12, int p22, int p32, int p4
         s21 = p21;
     }
 
-    // Back Right Pivot Servo
+    // Servo de Pivô Traseiro Direito
     if (s31 < p31)
     {
       if ((s31 + sp3) <= p31)
@@ -564,7 +550,7 @@ void srv( int  p11, int p21, int p31, int p41, int p12, int p22, int p32, int p4
         s31 = p31;
     }
 
-    // Front Right Pivot Servo
+    // Servo de Pivô Frontal Direito
     if (s41 < p41)
     {
       if ((s41 + sp4) <= p41)
@@ -581,7 +567,7 @@ void srv( int  p11, int p21, int p31, int p41, int p12, int p22, int p32, int p4
         s41 = p41;
     }
 
-    // Front Left Lift Servo
+    // Servo de Elevação Frontal Esquerdo
     if (s12 < p12)
     {
       if ((s12 + sp1) <= p12)
@@ -598,7 +584,7 @@ void srv( int  p11, int p21, int p31, int p41, int p12, int p22, int p32, int p4
         s12 = p12;
     }
 
-    // Back Left Lift Servo
+    // Servo de Elevação Traseiro Esquerdo
     if (s22 < p22)
     {
       if ((s22 + sp2) <= p22)
@@ -615,7 +601,7 @@ void srv( int  p11, int p21, int p31, int p41, int p12, int p22, int p32, int p4
         s22 = p22;
     }
 
-    // Back Right Lift Servo
+    // Servo de Elevação Traseiro Direito
     if (s32 < p32)
     {
       if ((s32 + sp3) <= p32)
@@ -632,7 +618,7 @@ void srv( int  p11, int p21, int p31, int p41, int p12, int p22, int p32, int p4
         s32 = p32;
     }
 
-    // Front Right Lift Servo
+    // Servo de Elevação Frontal Direito
     if (s42 < p42)
     {
       if ((s42 + sp4) <= p42)
@@ -649,19 +635,19 @@ void srv( int  p11, int p21, int p31, int p41, int p12, int p22, int p32, int p4
         s42 = p42;
     }
 
-    // Write Pivot Servo Values
+    // Escreve os Valores dos Servos de Pivô
     myServo1.write(s11 + da);
     myServo3.write(s21 + db);
     myServo5.write(s31 + dc);
     myServo7.write(s41 + dd);
 
-    // Write Lift Servos Values
+    // Escreve os Valores dos Servos de Elevação
     myServo2.write(s12);
     myServo4.write(s22);
     myServo6.write(s32);
     myServo8.write(s42);
 
-    delay(spd); // Delay before next movement
+    delay(spd); // Atraso antes do próximo movimento
 
-  }//while
-} //srv
+  } // while
+} // srv
