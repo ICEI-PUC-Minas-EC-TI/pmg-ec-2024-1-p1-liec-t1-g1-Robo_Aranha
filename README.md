@@ -1,4 +1,4 @@
-# ROBÔ ARANHA
+# ROBÔ ARANHA (Spindle)
 
 `CAMPUS CORAÇÃO EUCARÍSTICO`
 
