@@ -32,7 +32,7 @@ A montagem foi bastante trabalhosa, pois utilizamos um projeto desenvolvido por 
 
 ### Desenvolvimento do Código
 
-O desenvovlimento foi de certo trabalhoso, pois há uma dificulade em calibrar os movimetnos da aranha 
+O desenvolvimento foi, sem dúvida, bastante desafiador, especialmente devido à dificuldade em calibrar os movimentos da aranha. 
 
 ## Comunicação entre App e Hardware
 
