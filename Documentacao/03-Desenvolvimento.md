@@ -25,7 +25,8 @@ Quando o usuário pressionava um botão no aplicativo, ele enviava um comando vi
 
 ### Interface
 
-Descreva o desenvolvimento das telas do aplicativo.
+O desenvolvimento no App Inventor foi prático, mas as ferramentas que ele oferece são um pouco limitadas, principalmente em layout. Inicialmente, havia dois botões que faziam o robô andar para a esquerda e para a direita, mas isso foi descartado por melhor uso da interface. Depois, foram programados os botões de dançar e acenar.<br/>
+O código funciona da seguinte forma: após selecionar um servidor Bluetooth a partir da lista, o aplicativo enviará um caractere respectivo ao botão apertado para o servidor, que é então interpretado no código do Arduino..
 
 ### Código
 Inicialmente, o código foi desenvolvido para testar os motores, incluindo a calibração e a identificação. Posteriormente, adaptou-se o código para controlar o movimento da máquina e, por fim, para integrá-lo aos comandos via Bluetooth e ao aplicativo. 
