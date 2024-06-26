@@ -22,7 +22,7 @@ Descreva o desenvolvimento das telas do aplicativo.
 
 ### Código
 
-Descreva o desenvolvimento do código do aplicativo.
+Primeiramente, o código foi direcionado para testar motores, como a calibração e a identificação. Em seguida, o código foi moldado para o funcionamento da movimentação da máquina e posteriormente para alinhar com os comandos bluetooth  e aplicativo.
 
 ## Desenvolvimento do Hardware
 
