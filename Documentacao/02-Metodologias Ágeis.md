@@ -7,7 +7,7 @@ No desenvolvimento do robô-aranha quadrúpede, a equipe adotou uma abordagem es
 
 ### Divisão de Papéis
 
-A nossa equipe fez uma divisão de trabalho estraatégica com base na experiência de cada um do grupo e suas habilidades com a programação de arduino. Lembrando que todos as partes do trabalho foram revisadas por toda à equipe.<br/>
+A nossa equipe fez uma divisão de trabalho estratégica com base na experiência de cada um do grupo e suas habilidades com a programação de arduino. Lembrando que todos as partes do trabalho foram revisadas por toda à equipe.<br/>
 -Ravi- Foi responsável pela programação do rôbo e pela montagem do Hardware<br/>
 -Lucas- Foi responsável pela criação do aplicativo.<br/>
 -Yuri- Foi responsável por calibrar os motores do rôbo.<br/>
