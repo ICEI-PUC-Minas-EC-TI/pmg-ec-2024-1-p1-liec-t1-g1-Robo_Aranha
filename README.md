@@ -6,7 +6,7 @@
 
 `PRIMEIRO SEMESTRE`
 
-`LABORATÓRIO DE INTRODUÇÃO À ENGENHARIA DE COMPUTAÇÃO`
+`LABORATÓRIO DE INTRODUÇÃO À ENGENHARIA DE COMPUTAÇÃO`, `Algoritmos e Estruturas de Dados I`, `Introdução à Computação`
 
 
 ## Integrantes
@@ -19,6 +19,8 @@
 ## Orientador
 
 * Felipe Lara
+* Sandro Jerônimo de Almeida
+* Naísses Zóia Lima
 
 ## Resumo
 
