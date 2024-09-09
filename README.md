@@ -16,7 +16,7 @@
 * Sophia da Costa Fernandes
 * Ravi Dornellas e Silva
 
-## Orientador
+## Orientadores
 
 * Felipe Lara
 * Sandro Jerônimo de Almeida
